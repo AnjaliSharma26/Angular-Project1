@@ -1,0 +1,21 @@
+<h2 class="title">User Dashboard</h2>
+
+<!-- If no users -->
+<p *ngIf="users.length === 0" class="no-data">
+  No users found!
+</p>
+
+<!-- If users exist -->
+<div class="table-container" *ngIf="users.length > 0">
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+    </tr>
+
+    <tr *ngFor="let user of users" appHighlight>
+      <td>{{ user.name | capitalize }}</td>
+      <td>{{ user.email }}</td>
+    </tr>
+  </table>
+</div>

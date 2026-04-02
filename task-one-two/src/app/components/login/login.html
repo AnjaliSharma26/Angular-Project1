@@ -1,0 +1,25 @@
+<div class="login-container">
+  <form (ngSubmit)="login()" class="login-card">
+
+    <h2>Login</h2>
+
+    <input 
+      type="text" 
+      [(ngModel)]="user.name" 
+      name="name" 
+      placeholder="Enter Name" 
+      required 
+    />
+
+    <input 
+      type="email" 
+      [(ngModel)]="user.email" 
+      name="email" 
+      placeholder="Enter Email" 
+      required 
+    />
+
+    <button type="submit">Login</button>
+
+  </form>
+</div>
