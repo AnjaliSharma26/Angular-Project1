@@ -1,0 +1,43 @@
+<!-- <h2>Lists</h2>
+
+<p>Total items: {{ lists().length }}</p>
+
+@if (lists().length > 0) {
+  <div class="card-container">
+    @for (l of lists(); track l.id) {
+      <div class="card">
+        <h3>{{ l.title }}</h3>
+        <p>{{ l.body }}</p>
+      </div>
+    }
+  </div>
+} @else {
+  <p>No data found</p>
+} -->
+
+<h2>Lists</h2>
+
+<p>Total items: {{ lists().length }}</p>
+
+@if (lists().length > 0) {
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Body</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (l of lists(); track l.id) {
+        <tr>
+          <td>{{ l.id }}</td>
+          <td>{{ l.title }}</td>
+          <td>{{ l.body }}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+} @else {
+  <p>No data found</p>
+}
