@@ -1,0 +1,9 @@
+<h3>Products</h3>
+
+<div class="card-container">
+  <div class="card" *ngFor="let p of products">
+    <h4>{{ p.name }}</h4>
+    <p>ID: {{ p.id }}</p>
+    <button (click)="goToDetails(p.id)">View</button>
+  </div>
+</div>
